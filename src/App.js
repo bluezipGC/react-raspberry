@@ -3,6 +3,16 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
 import React, { useState } from 'react';
 
+fetch('https://api.weather.gov/points/39.7456,-97.0892')
+.then(response => response.json())
+.then(data => {
+  console.log(data);
+  })
+  .catch(error => {
+    console.error(error);
+  })
+
+
 // Component for the list of items
 function List(props) {
   return (
